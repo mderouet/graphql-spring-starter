@@ -1,0 +1,22 @@
+type Query {
+    restaurantById(id: ID!): Restaurant
+    restaurants: [Restaurant]
+    waiterById(id: ID!): Waiter
+    waiters: [Waiter]
+}
+
+type Restaurant {
+    id: ID!
+    name: String!
+    address: String!
+    postalCode: String!
+    city: String!
+    country: String!
+    waiters: [Waiter]
+}
+
+type Waiter {
+    id: ID!
+    firstName: String!
+    lastName: String!
+}
