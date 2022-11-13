@@ -8,6 +8,4 @@ WORKDIR /
 
 RUN ./gradlew --no-daemon --parallel clean assemble
 
-COPY build/libs/*.jar /applications/graphql.jar
-
-ENTRYPOINT ["java","-jar", "graphql.jar"]
+ENTRYPOINT ["java","-jar", "build/libs/*.jar"]
